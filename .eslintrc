@@ -5,6 +5,7 @@
   },
   "rules": {
     "prefer-const": 2,
-    "padded-blocks": 0
+    "padded-blocks": 0,
+    "brace-style": 0
   }
 }
