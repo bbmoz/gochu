@@ -1,0 +1,10 @@
+{
+  "extends": ["standard"],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "prefer-const": 2,
+    "padded-blocks": 0
+  }
+}
