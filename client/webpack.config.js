@@ -33,11 +33,7 @@ const config = {
         removeComments: true
       }
     })
-  ],
-
-  node: {
-    fs: 'empty'
-  }
+  ]
 }
 
 module.exports = config

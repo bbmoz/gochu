@@ -1,10 +1,13 @@
 const express = require('express')
 const path = require('path')
+const bodyParser = require('body-parser')
 const GraphWs = require('./GraphWs')
 
 const port = 8080
 const app = express()
 const graphWs = new GraphWs(app)
+
+app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
   res.sendfile(path.join(`${__dirname}/index.html`))
