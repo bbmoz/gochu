@@ -1,19 +1,27 @@
 {
   "name": "gochu",
   "version": "0.0.0-development",
-  "description": "Create DOM elements easily as testable components.",
-  "main": "index.js",
+  "description": "See your project's dependency graph",
+  "main": "dist/gochu.js",
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "prebuild": "rm -rf dist/",
-    "build": "webpack -p --bail",
+    "build:client": "cd client/ && webpack --bail",
+    "build:server": "cd server/ && ./build.sh",
+    "build:lib": "cd lib/ && ./build.sh",
+    "build": "npm run build:client && npm run build:server && npm run build:lib",
     "pretest": "npm run build",
-    "test": "eslint src/ test/ && ava",
+    "test": "eslint client/ server/ lib/ && ava",
     "tdd": "ava -w",
-    "preexample": "npm run build",
-    "example": "cd example/ && webpack && http-server dist/",
     "prerelease": "npm run build",
     "release": "semantic-release pre && npm publish && semantic-release post",
-    "commitmsg": "validate-commit-msg"
+    "commitmsg": "validate-commit-msg",
+    "prestart": "npm run build",
+    "start": "http-server dist/"
   },
   "repository": {
     "type": "git",
@@ -40,11 +48,14 @@
   "homepage": "https://github.com/bbmoz/gochu",
   "ava": {
     "files": [
-      "test/**/*.js"
+      "client/test/**/*.js",
+      "lib/test/**/*.js"
     ],
     "source": [
-      "src/**/*.js",
-      "!src/index.js"
+      "client/src/**/*.js",
+      "!client/src/index.js",
+      "lib/src/**/*.js",
+      "!lib/src/index.js"
     ],
     "failWithoutAssertions": true,
     "powerAssert": true,
@@ -60,6 +71,8 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.3.2",
     "babel-preset-latest": "^6.24.0",
+    "body-parser": "^1.17.1",
+    "bufferutil": "^3.0.0",
     "eslint": "^3.19.0",
     "eslint-config-standard": "^10.2.0",
     "eslint-plugin-import": "^2.2.0",
@@ -67,10 +80,17 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "esprima": "^3.1.3",
+    "express": "^4.15.2",
+    "glob-fs": "^0.1.6",
+    "html-webpack-plugin": "^2.28.0",
     "husky": "^0.13.3",
+    "request": "^2.81.0",
     "semantic-release": "^6.3.2",
     "sinon": "^2.1.0",
+    "utf-8-validate": "^3.0.1",
     "validate-commit-msg": "^2.12.1",
-    "webpack": "^2.3.2"
+    "vivagraphjs": "^0.8.2",
+    "webpack": "^2.3.2",
+    "websocket": "^1.0.24"
   }
 }
