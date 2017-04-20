@@ -1,26 +1,30 @@
-import WS from 'ws'
+import websocket from 'socket.io-client'
 import Viva from 'vivagraphjs'
 
 class GraphWs {
-  constructor (WebSocketClient = WS,
-               url = 'ws://localhost:8080/',
+  constructor (ws = websocket,
+               url = 'http://localhost:8080',
                graph = Viva.Graph.graph(),
                renderer = Viva.Graph.View.renderer) {
-    this.WebSocketClient = WebSocketClient
+    this.ws = ws
     this.url = url
     this.graph = graph
     this.renderer = renderer
   }
 
   start () {
-    const webSocketClient = new this.WebSocketClient(this.url)
+    const socket = this.ws(this.url)
 
-    webSocketClient.on('open', () => {
-      console.log(`${new Date()} => connection open`)
+    socket.on('connect', () => {
+      console.log(`${new Date()} => connect`)
     })
 
-    webSocketClient.on('message', data => {
-      console.log(`${new Date()} => received: ${data}`)
+    socket.on('disconnect', () => {
+      console.log(`${new Date()} => disconnect`)
+    })
+
+    socket.on('event', data => {
+      console.log(`${new Date()} => event: ${data}`)
     })
   }
 }

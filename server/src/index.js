@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/modules', (req, res) => {
-  console.log(`${new Date()} => ${req.body}`)
+  console.log(`${new Date()} => post: ${req.body}`)
   graphWs.connection.send(req.body)
 })
 

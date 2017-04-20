@@ -22,6 +22,7 @@
     "commitmsg": "validate-commit-msg",
     "prestart": "npm run build",
     "start": "node dist/",
+    "pregraph": "npm run build:lib",
     "graph": "node dist/lib/"
   },
   "repository": {
@@ -73,7 +74,6 @@
     "babel-preset-env": "^1.3.2",
     "babel-preset-latest": "^6.24.0",
     "body-parser": "^1.17.1",
-    "bufferutil": "^3.0.0",
     "eslint": "^3.19.0",
     "eslint-config-standard": "^10.2.0",
     "eslint-plugin-import": "^2.2.0",
@@ -89,10 +89,10 @@
     "request": "^2.81.0",
     "semantic-release": "^6.3.2",
     "sinon": "^2.1.0",
-    "utf-8-validate": "^3.0.1",
+    "socket.io": "^1.7.3",
+    "socket.io-client": "^1.7.3",
     "validate-commit-msg": "^2.12.1",
     "vivagraphjs": "^0.8.2",
-    "webpack": "^2.3.2",
-    "ws": "^2.2.3"
+    "webpack": "^2.3.2"
   }
 }
