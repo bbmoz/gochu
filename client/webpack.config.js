@@ -5,12 +5,12 @@ const config = {
   context: path.join(__dirname, 'src'),
 
   entry: {
-    server: './index.js'
+    client: './index.js'
   },
 
   output: {
-    path: path.join(__dirname, '..', 'dist', 'client'),
-    filename: 'index.js'
+    path: path.join(__dirname, '..', 'dist'),
+    filename: 'client.js'
   },
 
   module: {
@@ -26,14 +26,15 @@ const config = {
   plugins: [
     new $Html({
       template: './index.html',
-      inject: true,
-      hash: true,
-      minify: {
-        collapseWhitespace: true,
-        removeComments: true
-      }
+      inject: true
     })
-  ]
+  ],
+
+  node: {
+    fs: 'empty'
+  },
+
+  devtool: 'eval-source-map'
 }
 
 module.exports = config

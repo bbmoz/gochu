@@ -1,29 +1,20 @@
-const WebSocketServer = require('websocket').server
+const WS = require('ws').Server
 
 class GraphWs {
-  constructor (app,
-               WSS = WebSocketServer) {
-    this.WSS = WSS
-    this.config = {
-      httpServer: app,
-      autoAcceptConnections: false
-    }
+  constructor (httpServer,
+               WebSocketServer = WS) {
+    this.httpServer = httpServer
+    this.WebSocketServer = WebSocketServer
   }
 
   start () {
-    const webSocketServer = new this.WSS(this.config)
+    const webSocketServer = new this.WebSocketServer({
+      server: this.httpServer
+    })
 
-    webSocketServer.on('request', request => {
-      this.connection = request.accept('echo-protocol', request.origin)
-      console.log(`${new Date()} => connection from origin ${request.origin} accepted`)
-
-      this.connection.on('message', message => {
-        console.log(message)
-      })
-
-      this.connection.on('close', (reasonCode, description) => {
-        console.log(`${new Date()} => peer ${this.connection.remoteAddress} disconnected`)
-      })
+    webSocketServer.on('connection', ws => {
+      console.log(`${new Date()} => connection open`)
+      this.connection = ws
     })
   }
 }
