@@ -5,10 +5,12 @@ class GraphWs {
   constructor (ws = websocket,
                url = 'http://localhost:8080',
                graph = Viva.Graph.graph(),
+               graphics = Viva.Graph.View.webglGraphics(),
                renderer = Viva.Graph.View.renderer) {
     this.ws = ws
     this.url = url
     this.graph = graph
+    this.graphics = graphics
     this.renderer = renderer
   }
 
@@ -28,7 +30,9 @@ class GraphWs {
       Object.keys(data).forEach(moduleName => {
         this.graph.addNode(moduleName, data[moduleName])
       })
-      this.renderer(this.graph).run()
+      this.renderer(this.graph, {
+        graphics: this.graphics
+      }).run()
     })
   }
 }

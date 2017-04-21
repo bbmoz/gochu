@@ -1,3 +1,4 @@
+import './index.css'
 import GraphWs from './GraphWs'
 
 const graphWs = new GraphWs()
