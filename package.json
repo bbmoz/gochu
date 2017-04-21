@@ -75,6 +75,7 @@
     "babel-preset-latest": "^6.24.0",
     "body-parser": "^1.17.1",
     "css-loader": "^0.28.0",
+    "cytoscape": "^3.0.0",
     "eslint": "^3.19.0",
     "eslint-config-standard": "^10.2.0",
     "eslint-plugin-import": "^2.2.0",
@@ -95,7 +96,6 @@
     "socket.io-client": "^1.7.3",
     "style-loader": "^0.16.1",
     "validate-commit-msg": "^2.12.1",
-    "vivagraphjs": "^0.8.2",
     "webpack": "^2.3.2"
   }
 }
