@@ -23,8 +23,12 @@ class GraphWs {
       console.log(`${new Date()} => disconnect`)
     })
 
-    socket.on('event', data => {
-      console.log(`${new Date()} => event: ${data}`)
+    socket.on('modules', data => {
+      console.log(`${new Date()} => modules: ${JSON.stringify(data)}`)
+      Object.keys(data).forEach(moduleName => {
+        this.graph.addNode(moduleName, data[moduleName])
+      })
+      this.renderer(this.graph).run()
     })
   }
 }

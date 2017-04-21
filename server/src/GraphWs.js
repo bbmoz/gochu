@@ -10,9 +10,9 @@ class GraphWs {
   start () {
     const io = this.ws(this.server)
 
-    io.on('connection', connection => {
+    io.on('connection', socket => {
       console.log(`${new Date()} => connection`)
-      this.connection = connection
+      this.socket = socket
     })
   }
 }
