@@ -20,6 +20,7 @@ app.get('/', (req, res) => {
 app.post('/modules', (req, res) => {
   console.log(`${new Date()} => post: ${JSON.stringify(req.body)}`)
   graphWs.socket.emit('modules', req.body)
+  res.status(200).send()
 })
 
 const httpServer = http.createServer(app)
