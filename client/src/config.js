@@ -4,7 +4,7 @@ const config = {
   container: document.querySelector('main'),
 
   layout: {
-    name: 'cose',
+    name: 'breadthfirst',
     directed: true,
     padding: 10
   },
@@ -12,12 +12,14 @@ const config = {
   style: cytoscape.stylesheet()
     .selector('node')
       .css({
+        'height': 40,
+        'width': 40,
         'content': 'data(id)',
         'text-valign': 'center',
         'text-outline-width': 2,
-        'text-outline-color': '#000',
-        'background-color': '#000',
-        'color': '#fff'
+        'text-outline-color': 'black',
+        'background-color': 'black',
+        'color': 'white'
       })
     .selector(':selected')
       .css({
@@ -26,11 +28,11 @@ const config = {
       })
     .selector('edge')
       .css({
+        'width': 6,
         'curve-style': 'bezier',
-        'width': 4,
         'target-arrow-shape': 'triangle',
-        'target-arrow-color': '#ddd',
-        'line-color': '#ddd',
+        'target-arrow-color': 'dodgerblue',
+        'line-color': 'dodgerblue',
       }),
 
       elements: {

@@ -26,15 +26,31 @@ class GraphWs {
 
     socket.on('modules', data => {
       console.log(`${new Date()} => modules: ${JSON.stringify(data)}`)
-      Object.keys(data).forEach(moduleName => {
-        const { nodes, edges } = this.config.elements
-        nodes.push({
-          data: {
-            id: moduleName
-          }
+
+      const { nodes, edges } = this.config.elements
+
+      Object.keys(data).forEach(modulePath => {
+        const splitPath = modulePath.split('/')
+        const id = splitPath[splitPath.length - 1].split('.js')[0]
+
+        nodes.push({ data: { id } })
+
+        const modules = data[modulePath]
+        const { imports, exports } = modules
+
+        Object.keys(imports).forEach(importEntry => {
+          edges.push({
+            data: {
+              source: id,
+              target: importEntry.slice(importEntry.indexOf('/') + 1),
+              label: { imports, exports }
+            }
+          })
         })
-        // TODO: edges
       })
+
+      console.log(this.config.elements)
+
       this.graph(this.config)
     })
   }
