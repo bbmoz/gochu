@@ -8,8 +8,6 @@ const GraphWs = require('./GraphWs')
 const port = 8080
 const app = express()
 
-let graphWs
-
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(bodyParser.json())
 
@@ -25,7 +23,7 @@ app.post('/modules', (req, res) => {
 
 const httpServer = http.createServer(app)
 
-graphWs = new GraphWs(httpServer)
+const graphWs = new GraphWs(httpServer)
 graphWs.start()
 
 httpServer.listen(port, () => {

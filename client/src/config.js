@@ -32,13 +32,13 @@ const config = {
         'curve-style': 'bezier',
         'target-arrow-shape': 'triangle',
         'target-arrow-color': 'dodgerblue',
-        'line-color': 'dodgerblue',
+        'line-color': 'dodgerblue'
       }),
 
-      elements: {
-        nodes: [],
-        edges: []
-      }
+  elements: {
+    nodes: [],
+    edges: []
+  }
 }
 
 export default config
