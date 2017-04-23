@@ -5,6 +5,8 @@
 [![Code Climate](https://codeclimate.com/github/bbmoz/gochu/badges/gpa.svg)](https://codeclimate.com/github/bbmoz/gochu)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/bbmoz/gochu/blob/master/LICENSE)
 
+> View a graph of your project's modules!
+
 ## Get Started
 
 ```bash
@@ -13,18 +15,21 @@ $ npm install -g gochu
 
 ## CLI
 
-There are two parts to view your project graph. First, you must start the web client. Then, you can run `gochu` to generate a graph.
+You must first start the web client before running `gochu` to generate a graph.
 
 ```bash
-$ gochu-web                     # start web client to view graph
+$ gochu-web                     # start web client at localhost:8080
 $ gochu [-t|--target '<glob>']  # parse files and generate graph
 $ gochu -h                      # show help
 ```
 
+Go to `http://localhost:8080` to view your generated graph.
+
 ## Features
 
 - visual graph of project files and their relationships
-- support for ES6 modules using `import`'s and/or `export`'s
+- real-time graph each time `gochu` is executed
+- support for ES6 modules (`import` and `export`)
 
 Enjoy!
 

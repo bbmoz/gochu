@@ -1,7 +1,7 @@
 {
   "name": "gochu",
-  "version": "0.0.0-development",
-  "description": "See your project's dependency graph",
+  "version": "0.1.0",
+  "description": "View a graph of your project's modules!",
   "main": "dist/gochu.js",
   "preferGlobal": true,
   "bin": {
