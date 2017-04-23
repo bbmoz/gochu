@@ -3,6 +3,7 @@
   "version": "0.0.0-development",
   "description": "See your project's dependency graph",
   "main": "dist/gochu.js",
+  "preferGlobal": true,
   "bin": {
     "gochu": "cli/gochu",
     "gochu-web": "cli/gochu-web"
@@ -10,6 +11,7 @@
   "files": [
     "cli/",
     "dist/",
+    "example/",
     "README.md",
     "LICENSE"
   ],
@@ -18,18 +20,13 @@
     "build:client": "cd client/ && webpack --bail",
     "build:server": "babel server/src/ -d dist/",
     "build:lib": "babel lib/src/ -d dist/lib/",
-    "build": "npm run build:lib && npm run build:client && npm run build:server",
+    "build": "yarn build:client && yarn build:server && yarn build:lib",
     "lint": "eslint client/ server/ lib/ shared/ && flow",
-    "pretest": "npm run build && npm run lint",
+    "pretest": "yarn build && yarn lint",
     "test": "ava",
-    "tdd": "ava -w",
-    "prerelease": "npm run build",
+    "prerelease": "yarn build",
     "release": "semantic-release pre && npm publish && semantic-release post",
-    "commitmsg": "validate-commit-msg",
-    "prestart": "npm run build:client && npm run build:server",
-    "start": "node dist/",
-    "pregraph": "npm run build:lib",
-    "graph": "node dist/lib/"
+    "commitmsg": "validate-commit-msg"
   },
   "repository": {
     "type": "git",
