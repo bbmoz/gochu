@@ -1,6 +1,6 @@
 import b from './b'
 import c from './c'
 
-const d = b + c
+const e = b + c
 
-export default d
+export default e

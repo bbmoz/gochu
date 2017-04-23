@@ -38,20 +38,17 @@ class GraphWs {
       nodes.length = 0
       edges.length = 0
 
-      Object.keys(data).forEach(modulePath => {
-        const splitPath = modulePath.split('/')
-        const id = splitPath[splitPath.length - 1].split('.js')[0]
-
+      Object.keys(data).forEach(id => {
         nodes.push({ data: { id } })
 
-        const modules = data[modulePath]
+        const modules = data[id]
         const { imports, exports } = modules
 
-        Object.keys(imports).forEach(importEntry => {
+        Object.keys(imports).forEach(importId => {
           edges.push({
             data: {
               source: id,
-              target: importEntry.slice(importEntry.indexOf('/') + 1),
+              target: importId,
               label: { imports, exports }
             }
           })
