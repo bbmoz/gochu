@@ -1,6 +1,6 @@
 const logger = {
   log (txt) {
-    console.log(`${now()} => ${txt}`)
+    // console.log(`${now()} => ${txt}`)
   }
 }
 

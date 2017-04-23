@@ -17,7 +17,7 @@ const config = {
         'width': 50,
         'content': 'data(id)',
         'text-valign': 'center',
-        'text-outline-width': 2,
+        'text-outline-width': 1,
         'text-outline-color': 'palegreen',
         'background-color': 'palegreen',
         'color': 'black'

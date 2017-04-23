@@ -105,6 +105,7 @@
     "socket.io-client": "^1.7.3",
     "style-loader": "^0.16.1",
     "validate-commit-msg": "^2.12.1",
-    "webpack": "^2.3.2"
+    "webpack": "^2.3.2",
+    "yargs": "^7.1.0"
   }
 }

@@ -16,8 +16,9 @@ $ npm install -g gochu
 There are two parts to view your project graph. First, you must start the web client. Then, you can run `gochu` to generate a graph.
 
 ```bash
-$ gochu-web                 # start web client to view graph
-$ gochu [-t|-target <glob>] # parse files and generate graph
+$ gochu-web                     # start web client to view graph
+$ gochu [-t|--target '<glob>']  # parse files and generate graph
+$ gochu -h                      # show help
 ```
 
 ## Features
