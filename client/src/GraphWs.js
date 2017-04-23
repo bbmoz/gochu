@@ -34,7 +34,7 @@ class GraphWs {
     })
 
     socket.on('modules', data => {
-      logger.log(`modules: ${JSON.stringify(data)}`)
+      logger.log('render')
 
       const { nodes, edges } = this.config.elements
       nodes.length = 0
@@ -59,8 +59,6 @@ class GraphWs {
           })
         })
       })
-
-      logger.log(this.config.elements)
 
       this.graph(this.config)
     })
