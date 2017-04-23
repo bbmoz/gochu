@@ -1,7 +1,7 @@
 {
   "name": "gochu",
   "version": "0.0.0-development",
-  "description": "View a graph of your project's modules and their relationships!",
+  "description": "View a graph of your project!",
   "preferGlobal": true,
   "bin": {
     "gochu": "cli/gochu",

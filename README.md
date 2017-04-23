@@ -5,7 +5,9 @@
 [![Code Climate](https://codeclimate.com/github/bbmoz/gochu/badges/gpa.svg)](https://codeclimate.com/github/bbmoz/gochu)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/bbmoz/gochu/blob/master/LICENSE)
 
-> View a graph of your project's modules and their relationships!
+![gochu](/media/example.png)
+
+> View a graph of your project!
 
 ## Get Started
 
