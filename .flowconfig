@@ -2,18 +2,11 @@
 <PROJECT_ROOT>/client/test/
 <PROJECT_ROOT>/client/webpack.config.js
 <PROJECT_ROOT>/lib/test/
-<<<<<<< 8535670c12aef44e95d7714838890ec79f41fdc2
-<PROJECT_ROOT>/lib/rollup.config.js
 <PROJECT_ROOT>/server/test/
-<PROJECT_ROOT>/server/rollup.config.js
-=======
-<PROJECT_ROOT>/lib/webpack.config.js
-<PROJECT_ROOT>/server/test/
-<PROJECT_ROOT>/server/webpack.config.js
->>>>>>> chore: introduce flow type checking
 <PROJECT_ROOT>/node_modules/
 <PROJECT_ROOT>/dist/
 <PROJECT_ROOT>/example/
+<PROJECT_ROOT>/shared/
 <PROJECT_ROOT/*
 
 [options]

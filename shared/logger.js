@@ -1,5 +1,5 @@
 const logger = {
-  log (txt: string) {
+  log (txt) {
     console.log(`${now()} => ${txt}`)
   }
 }

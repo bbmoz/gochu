@@ -3,6 +3,7 @@ import websocket from 'socket.io-client'
 // $FlowFixMe
 import cytoscape from 'cytoscape'
 import defaultConfig from './config'
+// $FlowFixMe
 import logger from './../../shared/logger'
 
 class GraphWs {
