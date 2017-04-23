@@ -6,8 +6,6 @@ engines:
       - javascript
   fixme:
     enabled: true
-  markdownlint:
-    enabled: true
 ratings:
   paths:
   - "**.js"
