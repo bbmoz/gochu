@@ -1,13 +1,20 @@
+//$FlowFixMe
 import websocket from 'socket.io-client'
+//$FlowFixMe
 import cytoscape from 'cytoscape'
 import defaultConfig from './config'
 import logger from './../../shared/logger'
 
 class GraphWs {
-  constructor (ws = websocket,
-               url = 'http://localhost:8080',
-               graph = cytoscape,
-               config = defaultConfig) {
+  ws: any
+  url: string
+  graph: any
+  config: any
+
+  constructor (ws: any = websocket,
+               url: string = 'http://localhost:8080',
+               graph: any = cytoscape,
+               config: any = defaultConfig) {
     this.ws = ws
     this.url = url
     this.graph = graph
@@ -17,18 +24,7 @@ class GraphWs {
   start () {
     const socket = this.ws(this.url)
 
-    socket.on('connect', () => {
-<<<<<<< HEAD
-      console.log(`${new Date()} => connect`)
-    })
-
-    socket.on('disconnect', () => {
-      console.log(`${new Date()} => disconnect`)
-    })
-
-    socket.on('modules', data => {
-      console.log(`${new Date()} => modules: ${JSON.stringify(data)}`)
-=======
+    socket.on('connect', data => {
       logger.log('connect')
     })
 
@@ -38,7 +34,6 @@ class GraphWs {
 
     socket.on('modules', data => {
       logger.log(`modules: ${JSON.stringify(data)}`)
->>>>>>> b65025a... chore: bundle lib and server using rollup
 
       const { nodes, edges } = this.config.elements
 

@@ -1,14 +1,14 @@
-<<<<<<< HEAD
-const websocket = require('socket.io')
-=======
 //$FlowFixMe
-import websocket from 'socket.io'
-import logger from './../../shared/logger'
->>>>>>> b65025a... chore: bundle lib and server using rollup
+const websocket = require('socket.io')
+const logger = require('./../../shared/logger')
 
 class GraphWs {
-  constructor (server,
-               ws = websocket) {
+  server: any
+  ws: any
+  socket: any
+
+  constructor (server: any,
+               ws: any = websocket) {
     this.server = server
     this.ws = ws
   }
@@ -17,18 +17,10 @@ class GraphWs {
     const io = this.ws(this.server)
 
     io.on('connection', socket => {
-<<<<<<< HEAD
-      console.log(`${new Date()} => connection`)
-=======
       logger.log('connection')
->>>>>>> b65025a... chore: bundle lib and server using rollup
       this.socket = socket
     })
   }
 }
 
-<<<<<<< HEAD
 module.exports = GraphWs
-=======
-export default GraphWs
->>>>>>> b65025a... chore: bundle lib and server using rollup

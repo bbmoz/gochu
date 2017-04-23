@@ -7,12 +7,11 @@
     }],
     ["env", {
       "targets": {
-        "browsers": [
-          "> 5%",
-          "last 2 versions"
-        ]
+        "browsers": ["> 5%", "last 2 versions"],
+        "node": "current"
       }
-    }]
+    }],
+    "flow"
   ],
   "plugins": ["transform-runtime"]
 }

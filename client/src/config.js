@@ -1,3 +1,4 @@
+//$FlowFixMe
 import cytoscape from 'cytoscape'
 
 const config = {
