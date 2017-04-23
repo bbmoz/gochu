@@ -1,8 +1,7 @@
 {
   "name": "gochu",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "description": "View a graph of your project's modules!",
-  "main": "dist/gochu.js",
   "preferGlobal": true,
   "bin": {
     "gochu": "cli/gochu",
@@ -97,7 +96,6 @@
     "glob-fs": "^0.1.6",
     "html-webpack-plugin": "^2.28.0",
     "husky": "^0.13.3",
-    "nodemon": "^1.11.0",
     "request": "^2.81.0",
     "semantic-release": "^6.3.2",
     "sinon": "^2.1.0",
