@@ -3,7 +3,12 @@
   "version": "0.0.0-development",
   "description": "See your project's dependency graph",
   "main": "dist/gochu.js",
+  "bin": {
+    "gochu": "cli/gochu",
+    "gochu-web": "cli/gochu-web"
+  },
   "files": [
+    "cli/",
     "dist/",
     "README.md",
     "LICENSE"
