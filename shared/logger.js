@@ -4,7 +4,7 @@ const logger = {
   }
 }
 
-function now() {
+function now () {
   return String(new Date())
 }
 

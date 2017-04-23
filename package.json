@@ -14,7 +14,7 @@
     "build:server": "babel server/src/ -d dist/",
     "build:lib": "babel lib/src/ -d dist/lib/",
     "build": "npm run build:lib && npm run build:client && npm run build:server",
-    "lint": "eslint client/ server/ lib/ && flow",
+    "lint": "eslint client/ server/ lib/ shared/ && flow",
     "pretest": "npm run build && npm run lint",
     "test": "ava",
     "tdd": "ava -w",
@@ -41,7 +41,9 @@
     "export",
     "require",
     "ast",
-    "es6"
+    "es6",
+    "visualization",
+    "viz"
   ],
   "author": "Joe Lee <https://github.com/bbmoz>",
   "license": "MIT",
