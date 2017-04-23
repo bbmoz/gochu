@@ -37,6 +37,8 @@ class GraphWs {
       logger.log(`modules: ${JSON.stringify(data)}`)
 
       const { nodes, edges } = this.config.elements
+      nodes.length = 0
+      edges.length = 0
 
       Object.keys(data).forEach(modulePath => {
         const splitPath = modulePath.split('/')
