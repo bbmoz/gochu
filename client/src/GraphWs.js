@@ -1,6 +1,6 @@
-//$FlowFixMe
+// $FlowFixMe
 import websocket from 'socket.io-client'
-//$FlowFixMe
+// $FlowFixMe
 import cytoscape from 'cytoscape'
 import defaultConfig from './config'
 import logger from './../../shared/logger'

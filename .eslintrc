@@ -1,11 +1,13 @@
 {
-  "extends": ["standard"],
+  "extends": ["standard", "plugin:flowtype/recommended"],
   "env": {
     "browser": true
   },
   "rules": {
     "prefer-const": 2,
     "padded-blocks": 0,
-    "brace-style": 0
-  }
+    "brace-style": 0,
+    "flowtype/no-types-missing-file-annotation": 1
+  },
+  "plugins": ["flowtype"]
 }
