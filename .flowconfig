@@ -1,0 +1,14 @@
+[ignore]
+<PROJECT_ROOT>/client/test/
+<PROJECT_ROOT>/client/webpack.config.js
+<PROJECT_ROOT>/lib/test/
+<PROJECT_ROOT>/lib/rollup.config.js
+<PROJECT_ROOT>/server/test/
+<PROJECT_ROOT>/server/rollup.config.js
+<PROJECT_ROOT>/node_modules/
+<PROJECT_ROOT>/dist/
+<PROJECT_ROOT>/example/
+<PROJECT_ROOT/*
+
+[options]
+all=true

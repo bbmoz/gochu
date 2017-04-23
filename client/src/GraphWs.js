@@ -1,6 +1,7 @@
 import websocket from 'socket.io-client'
 import cytoscape from 'cytoscape'
 import defaultConfig from './config'
+import logger from './../../shared/logger'
 
 class GraphWs {
   constructor (ws = websocket,
@@ -17,6 +18,7 @@ class GraphWs {
     const socket = this.ws(this.url)
 
     socket.on('connect', () => {
+<<<<<<< HEAD
       console.log(`${new Date()} => connect`)
     })
 
@@ -26,6 +28,17 @@ class GraphWs {
 
     socket.on('modules', data => {
       console.log(`${new Date()} => modules: ${JSON.stringify(data)}`)
+=======
+      logger.log('connect')
+    })
+
+    socket.on('disconnect', () => {
+      logger.log('disconnect')
+    })
+
+    socket.on('modules', data => {
+      logger.log(`modules: ${JSON.stringify(data)}`)
+>>>>>>> b65025a... chore: bundle lib and server using rollup
 
       const { nodes, edges } = this.config.elements
 
@@ -49,7 +62,7 @@ class GraphWs {
         })
       })
 
-      console.log(this.config.elements)
+      logger.log(this.config.elements)
 
       this.graph(this.config)
     })
