@@ -13,14 +13,14 @@ const config = {
   style: cytoscape.stylesheet()
     .selector('node')
       .css({
-        'height': 40,
-        'width': 40,
+        'height': 50,
+        'width': 50,
         'content': 'data(id)',
         'text-valign': 'center',
         'text-outline-width': 2,
-        'text-outline-color': 'black',
-        'background-color': 'black',
-        'color': 'white'
+        'text-outline-color': 'palegreen',
+        'background-color': 'palegreen',
+        'color': 'black'
       })
     .selector(':selected')
       .css({
@@ -29,11 +29,11 @@ const config = {
       })
     .selector('edge')
       .css({
-        'width': 6,
+        'width': 7,
         'curve-style': 'bezier',
         'target-arrow-shape': 'triangle',
-        'target-arrow-color': 'dodgerblue',
-        'line-color': 'dodgerblue'
+        'target-arrow-color': 'lightskyblue',
+        'line-color': 'lightskyblue'
       }),
 
   elements: {
