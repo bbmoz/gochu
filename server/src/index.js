@@ -7,7 +7,7 @@ const express = require('express')
 //$FlowFixMe
 const bodyParser = require('body-parser')
 const GraphWs = require('./GraphWs')
-const logger = require('./../../shared/logger')
+const logger = require('./../shared/logger')
 
 const port = 8080
 const app = express()

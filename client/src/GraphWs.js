@@ -24,7 +24,7 @@ class GraphWs {
   start () {
     const socket = this.ws(this.url)
 
-    socket.on('connect', data => {
+    socket.on('connect', () => {
       logger.log('connect')
     })
 
