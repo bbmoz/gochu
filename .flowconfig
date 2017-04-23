@@ -7,7 +7,7 @@
 <PROJECT_ROOT>/dist/
 <PROJECT_ROOT>/example/
 <PROJECT_ROOT>/shared/
-<PROJECT_ROOT/*
+<PROJECT_ROOT>/*
 
 [options]
 all=true
