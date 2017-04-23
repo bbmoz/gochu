@@ -3,8 +3,6 @@ import websocket from 'socket.io-client'
 // $FlowFixMe
 import cytoscape from 'cytoscape'
 import defaultConfig from './config'
-// $FlowFixMe
-import logger from './../../shared/logger'
 
 class GraphWs {
   ws: any
@@ -26,15 +24,15 @@ class GraphWs {
     const socket = this.ws(this.url)
 
     socket.on('connect', () => {
-      logger.log('connect')
+      console.log('connect')
     })
 
     socket.on('disconnect', () => {
-      logger.log('disconnect')
+      console.log('disconnect')
     })
 
     socket.on('modules', data => {
-      logger.log('render')
+      console.log('render')
 
       const { nodes, edges } = this.config.elements
       nodes.length = 0

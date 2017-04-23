@@ -1,7 +1,7 @@
 // $FlowFixMe
 const websocket = require('socket.io')
 // $FlowFixMe
-const logger = require('./../shared/logger')
+const logger = require('./shared/logger')
 
 class GraphWs {
   server: any
