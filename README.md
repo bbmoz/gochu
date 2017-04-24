@@ -3,6 +3,7 @@
 [![npm version](https://badge.fury.io/js/gochu.svg)](https://www.npmjs.com/package/gochu)
 [![Build Status](https://travis-ci.org/bbmoz/gochu.svg)](https://travis-ci.org/bbmoz/gochu)
 [![Code Climate](https://codeclimate.com/github/bbmoz/gochu/badges/gpa.svg)](https://codeclimate.com/github/bbmoz/gochu)
+[![Dependency Status](https://dependencyci.com/github/bbmoz/gochu/badge)](https://dependencyci.com/github/bbmoz/gochu)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/bbmoz/gochu/blob/master/LICENSE)
 
 ![gochu](/media/example.png)
