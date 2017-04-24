@@ -1,12 +1,12 @@
 # Gochu
 
-[![npm version](https://badge.fury.io/js/gochu.svg)](https://www.npmjs.com/package/gochu)
-[![Build Status](https://travis-ci.org/bbmoz/gochu.svg)](https://travis-ci.org/bbmoz/gochu)
-[![Code Climate](https://codeclimate.com/github/bbmoz/gochu/badges/gpa.svg)](https://codeclimate.com/github/bbmoz/gochu)
-[![Dependency Status](https://dependencyci.com/github/bbmoz/gochu/badge)](https://dependencyci.com/github/bbmoz/gochu)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/bbmoz/gochu/blob/master/LICENSE)
+[![npm][npm]][npm-url]
+[![build][build]][build-url]
+[![climate][climate]][climate-url]
+[![deps][deps]][deps-url]
+[![license][license]][license-url]
 
-![gochu](/media/example.png)
+![example][example]
 
 > View a graph of your project!
 
@@ -51,6 +51,30 @@ $ gochu run [-h|--help]   # show "run" command info
 
 Enjoy!
 
-[![NPM](https://nodei.co/npm/gochu.png?compact=true)](https://www.npmjs.com/package/gochu)
+[![info][info]][info-url]
 
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/bbmoz/gochu)
+[![love][love]][love-url]
+
+
+[npm]: https://badge.fury.io/js/gochu.svg
+[npm-url]: https://www.npmjs.com/package/gochu
+
+[build]: https://travis-ci.org/bbmoz/gochu.svg
+[build-url]: https://travis-ci.org/bbmoz/gochu
+
+[climate]: https://codeclimate.com/github/bbmoz/gochu/badges/gpa.svg
+[climate-url]: https://codeclimate.com/github/bbmoz/gochu
+
+[deps]: https://dependencyci.com/github/bbmoz/gochu/badge
+[deps-url]: https://dependencyci.com/github/bbmoz/gochu
+
+[license]: https://img.shields.io/badge/license-MIT-blue.svg
+[license-url]: https://github.com/bbmoz/gochu/blob/master/LICENSE
+
+[example]: /media/example.png
+
+[info]: https://nodei.co/npm/gochu.png?compact=true
+[info-url]: https://www.npmjs.com/package/gochu
+
+[love]: http://forthebadge.com/images/badges/built-with-love.svg
+[love-url]: https://github.com/bbmoz/gochu
