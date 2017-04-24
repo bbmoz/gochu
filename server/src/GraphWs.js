@@ -19,6 +19,7 @@ class GraphWs {
 
     io.on('connection', socket => {
       logger.log('connection')
+      socket.on('render', () => logger.log('rendered'))
       this.socket = socket
     })
   }

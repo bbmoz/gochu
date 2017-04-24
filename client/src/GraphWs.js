@@ -53,6 +53,8 @@ class GraphWs {
             }
           })
         })
+
+        socket.emit('render', true)
       })
 
       this.graph(this.config)
