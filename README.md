@@ -15,23 +15,38 @@
 $ npm install -g gochu
 ```
 
+There are two ways to generate a graph:
+
+1. **Screenshot**
+```bash
+$ gochu start
+$ gochu run -s -t 'example/**/*.js'   # see .gochu/ for screenshots
+```
+
+2. **Live Graph**
+```bash
+$ gochu start
+$ gochu run -t 'example/**/*.js'  # open http://localhost:8080
+```
+
+*Make sure to start the gochu web server before generating a graph.
+
 ## CLI
 
-You must first start the web client and go to `http://localhost:8080` on your browser before generating a graph.
-
 ```bash
-$ gochu start                       # start web client at localhost:8080
-$ gochu stop                        # stop web client
-$ gochu run [-t|--target '<glob>']  # parse files and generate graph
-$ gochu [-h|--help]                 # show general help
-$ gochu run [-h|--help]             # show help for run command
+$ gochu start             # start web server at localhost:8080
+$ gochu stop              # stop web server
+$ gochu run [-s|--screenshot] [-t|--target '<glob>']  # generate graph
+$ gochu [-h|--help]       # show all commands
+$ gochu run [-h|--help]   # show "run" command info
 ```
 
 ## Features
 
 - visual graph of project files and their relationships
-- real-time graph each time `gochu run` is executed
-- support for ES6 modules (`import` and `export`)
+- real-time graph each time `gochu run -t` is executed
+- generate screenshots with `-s` option
+- support ES6 modules (`import` and `export`)
 
 Enjoy!
 
