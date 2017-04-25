@@ -19,8 +19,8 @@ app.get('/', (req, res) => {
   fs.createReadStream(path.join(__dirname, 'index.html')).pipe(res)
 })
 
-app.post('/modules', (req, res) => {
-  graphWs.socket.emit('modules', req.body)
+app.post('/modules', ({ body }, res) => {
+  graphWs.socket.emit('modules', body)
   res.status(200).send()
 })
 

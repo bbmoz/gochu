@@ -1,3 +1,4 @@
+import './style.css'
 import b from './b'
 import c from './c'
 

@@ -31,24 +31,28 @@ class GraphWs {
       console.log('disconnect')
     })
 
-    socket.on('modules', data => {
+    socket.on('modules', allModules => {
       console.log('render')
 
       const { nodes, edges } = this.config.elements
       nodes.length = 0
       edges.length = 0
 
-      Object.keys(data).forEach(id => {
-        nodes.push({ data: { id } })
+      Object.keys(allModules).forEach(filePath => {
+        nodes.push({
+          data: {
+            id: filePath
+          }
+        })
 
-        const modules = data[id]
+        const modules = allModules[filePath]
         const { imports, exports } = modules
 
-        Object.keys(imports).forEach(importId => {
+        Object.keys(imports).forEach(importFilePath => {
           edges.push({
             data: {
-              source: id,
-              target: importId,
+              source: filePath,
+              target: importFilePath,
               label: { imports, exports }
             }
           })
