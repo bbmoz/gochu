@@ -19,10 +19,9 @@
     "build:client": "cd client/ && webpack --bail",
     "build:server": "babel server/src/ -d dist/",
     "build:lib": "babel lib/src/ -d dist/lib/",
-    "build:shared": "babel shared/ -d dist/shared/",
-    "build": "yarn build:client && yarn build:server && yarn build:lib && yarn build:shared",
-    "lint": "eslint client/ server/ lib/ shared/ && flow",
-    "pretest": "yarn build && yarn lint",
+    "build": "yarn build:client && yarn build:server && yarn build:lib",
+    "lint": "eslint client/ server/ lib/ && flow",
+    "pretest": "yarn lint",
     "test": "ava",
     "prerelease": "yarn build",
     "release": "semantic-release pre && npm publish && semantic-release post",
@@ -59,13 +58,16 @@
   "ava": {
     "files": [
       "client/test/**/*.js",
-      "lib/test/**/*.js"
+      "lib/test/**/*.js",
+      "server/test/**/*.js"
     ],
     "source": [
       "client/src/**/*.js",
       "!client/src/index.js",
       "lib/src/**/*.js",
-      "!lib/src/index.js"
+      "!lib/src/index.js",
+      "server/src/**/*.js",
+      "!server/src/index.js"
     ],
     "failWithoutAssertions": true,
     "powerAssert": true,

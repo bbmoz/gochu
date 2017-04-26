@@ -1,7 +1,5 @@
 // $FlowFixMe
 const websocket = require('socket.io')
-// $FlowFixMe
-const logger = require('./shared/logger')
 
 class GraphWs {
   server: any
@@ -18,8 +16,8 @@ class GraphWs {
     const io = this.ws(this.server)
 
     io.on('connection', socket => {
-      logger.log('connection')
-      socket.on('render', () => logger.log('rendered'))
+      console.log('connection')
+      socket.on('render', () => console.log('rendered'))
       this.socket = socket
     })
   }
