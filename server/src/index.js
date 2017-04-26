@@ -6,8 +6,6 @@ const express = require('express')
 // $FlowFixMe
 const bodyParser = require('body-parser')
 const GraphWs = require('./GraphWs')
-// $FlowFixMe
-const logger = require('./shared/logger')
 
 const port = 8080
 const app = express()
@@ -30,5 +28,5 @@ const graphWs = new GraphWs(httpServer)
 graphWs.start()
 
 httpServer.listen(port, () => {
-  logger.log(`server is listening on port ${port}`)
+  console.log(`server is listening on port ${port}`)
 })
